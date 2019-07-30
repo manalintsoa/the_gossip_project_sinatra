@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>The Gossip Project</title>
+	</head>
+
+	<body>
+		<h1>Mon super site Gossip, depuis le dosier views !</h1>
+
+			<% gossips.each_with_index do |gossip, index| %>
+		        <p>
+		        	<ul>
+			          <li><%= gossip.author %><br/>
+			          <%= gossip.content %></li>
+				  		<a href="/gossips/<%=index%>">Show</a>
+						<a href="/gossips/edit/<%=index%>">Edit</a>
+			        </ul>
+		        </p>
+
+	      	<% end %>
+
+		<a href="/gossips/new/">Cliquez ici pour ajouter un nouveau Gossip</a>
+
+		
+
+	</body>
+</html>
